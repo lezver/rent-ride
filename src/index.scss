@@ -1,16 +1,94 @@
 @import-normalize; /* bring in normalize.css styles */
 
+:root {
+  --blue: #0b44cd;
+  --light-blue: #3470ff;
+  --white: #ffffff;
+  --half-white: #ffffffcc;
+  --darck-white: #f7f7fb;
+  --gray: #8a8a89;
+  --light-gray: #8a8a8933;
+  --black: #121417;
+  --half-black: #12141780;
+
+  --mob-wrap: 0 16px;
+  --tab-wrap: 0 24px;
+  --des-wrap: 0 24px;
+
+  --gap: 16px;
+
+  --time: 250ms;
+  --time-destribution: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --c-r: 'Comfortaa-Regular';
+  --c-l: 'Comfortaa-Light';
+  --c-b: 'Comfortaa-Bold';
+}
+
+@font-face {
+  font-family: 'Comfortaa-Regular';
+  src: url('./fonts/Comfortaa-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Comfortaa-Light';
+  src: url('./fonts/Comfortaa-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Comfortaa-Bold';
+  src: url('./fonts/Comfortaa-Bold.ttf');
+}
+
+a {
+  text-decoration: none;
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--c-r);
+  font-size: 16px;
+  color: var(--black);
+}
+html,
+body {
+  height: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  line-height: 1.5;
+}
+span {
+  line-height: 1.5;
 }

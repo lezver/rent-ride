@@ -1,0 +1,72 @@
+nav {
+  padding: 0 24px;
+  > ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    > li {
+      padding: 24px 0;
+
+      a {
+        display: block;
+        font-size: 18px;
+        font-family: var(--c-b);
+        cursor: pointer;
+        position: relative;
+        transform: scale(1);
+        transition: color var(--time) var(--time-destribution),
+          transform var(--time) var(--time-destribution);
+        color: var(--black);
+
+        &:active {
+          color: var(--white);
+        }
+        &:hover {
+          color: var(--gray);
+          transform: scale(0.95);
+        }
+
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: -10px;
+          left: 0;
+          height: 3px;
+          width: 100%;
+          background-color: var(--darck-white);
+          border-radius: 8px;
+          box-shadow: 0px 0px 8px 2px var(--darck-white);
+          opacity: 0;
+          transform: scale(0);
+          transition: opacity var(--time) var(--time-destribution),
+            transform var(--time) var(--time-destribution);
+        }
+
+        &.active {
+          color: var(--darck-white);
+          transform: scale(1.1);
+
+          &::after {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+
+        @media screen and (min-width: 576px) {
+          font-size: 20px;
+        }
+
+        @media screen and (min-width: 992px) {
+          font-size: 24px;
+        }
+      }
+    }
+
+    > li:last-child {
+      display: flex;
+      gap: var(--gap);
+    }
+  }
+}

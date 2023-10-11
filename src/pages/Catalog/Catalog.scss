@@ -1,0 +1,34 @@
+.catalog {
+  > h2 {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  > button {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    color: var(--light-blue);
+    border: none;
+    background-color: transparent;
+    font-family: var(--c-b);
+    text-decoration: underline;
+    transition: color var(--time) var(--time-destribution),
+      transform var(--time) var(--time-destribution);
+
+    &:hover {
+      color: var(--blue);
+    }
+
+    &:active {
+      color: var(--gray);
+      transform: scale(0.95);
+    }
+  }
+}
