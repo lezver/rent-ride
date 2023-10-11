@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/rent-ride/static/css/main.847be982.css",
+    "main.js": "/rent-ride/static/js/main.213f6bca.js",
+    "index.html": "/rent-ride/index.html",
+    "main.847be982.css.map": "/rent-ride/static/css/main.847be982.css.map",
+    "main.213f6bca.js.map": "/rent-ride/static/js/main.213f6bca.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.847be982.css",
+    "static/js/main.213f6bca.js"
+  ]
+}
