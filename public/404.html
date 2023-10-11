@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>My React App</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      // JavaScript код для перенаправлення на ваш додаток React
+      (function () {
+        // Перевірка, чи була змінена URL-адреса
+        if (window.location.pathname !== '/404.html') {
+          // Перенаправлення на ваш додаток React (наприклад, index.html)
+          window.location.href = '/index.html';
+        }
+      })();
+    </script>
+  </body>
+</html>

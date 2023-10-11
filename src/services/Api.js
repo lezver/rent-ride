@@ -11,13 +11,3 @@ export const getCars = async () => {
     console.error(error);
   }
 };
-
-export const changeFavorite = async (id, data) => {
-  try {
-    const response = await axios.put(`${BASE_URL}/cars/${id}`, data);
-
-    return response;
-  } catch (error) {
-    console.error(error);
-  }
-};
