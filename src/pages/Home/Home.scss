@@ -1,7 +1,12 @@
 .home {
-  height: 78%;
-  background: url('../../images/home.jpg') no-repeat 65% / cover;
+  height: 100%;
+  background: url('../../images/home.jpg') no-repeat 65% / contain;
   box-shadow: inset 0px 0px 25px 25px var(--white);
+
+  @media screen and (min-width: 576px) {
+    background: url('../../images/home.jpg') no-repeat 65% / contain;
+    box-shadow: inset 0px 0px 55px 55px var(--white);
+  }
 
   > h1 {
     font-family: var(--c-b);
