@@ -7,7 +7,7 @@ export const Loader = () => (
     radius="48"
     color="#3470ff"
     ariaLabel="watch-loading"
-    wrapperStyle={{}}
+    wrapperStyle={{ justifyContent: 'center' }}
     wrapperClassName=""
     visible={true}
   />

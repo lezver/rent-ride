@@ -13,6 +13,7 @@ export const Favorites = ({ choose }) => {
     if (localFavoriteCars) {
       setFavoriteCars(JSON.parse(localFavoriteCars));
     }
+    // eslint-disable-next-line
   }, []);
 
   return (
