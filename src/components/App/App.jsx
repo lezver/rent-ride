@@ -7,7 +7,7 @@ import { Info } from '../';
 const Catalog = lazy(() => import('../../pages/Catalog/Catalog'));
 
 export const App = () => {
-  const [chooseCar, setChooseCar] = useState({});
+  const [chooseCar, setChooseCar] = useState(null);
 
   return (
     <Routes>

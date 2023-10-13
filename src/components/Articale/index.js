@@ -1,0 +1,1 @@
+export { Articale } from './Articale';

@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom';
 import './Overlay.scss';
-import { PopupWindow } from '../';
+import { Articale } from '../';
 import { RxCross2 } from 'react-icons/rx';
 
 export const Overlay = ({ isOpen, car }) => {
@@ -12,9 +12,9 @@ export const Overlay = ({ isOpen, car }) => {
           type="button"
           onClick={() => isOpen(false)}
         >
-          <RxCross2 size={18} />
+          <RxCross2 size={20} />
         </button>
-        <PopupWindow car={car} />
+        <Articale car={car} />
       </div>
     </div>,
     document.querySelector('#overlay')

@@ -4,7 +4,7 @@ import { Navigation } from './Navigation';
 import { ListCars } from './ListCars';
 import { ItemCar } from './ItemCar';
 import { Overlay } from './Overlay';
-import { PopupWindow } from './PopupWindow';
+import { Articale } from './Articale';
 import { Info } from './Info';
 import { Loader } from './Loader';
 
@@ -15,7 +15,7 @@ export {
   ListCars,
   ItemCar,
   Overlay,
-  PopupWindow,
+  Articale,
   Info,
   Loader,
 };

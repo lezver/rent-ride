@@ -3,12 +3,12 @@ import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Loader, Navigation } from '../';
 
-export const Layout = () => {
+export const Layout = ({ isEmpty }) => {
   return (
     <>
       <header className="header">
         <div className="wrapper">
-          <Navigation />
+          <Navigation isEmpty={isEmpty} />
         </div>
       </header>
       <main className="main">

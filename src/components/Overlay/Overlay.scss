@@ -18,6 +18,7 @@
     max-height: 75vh;
     max-width: 541px;
     border-radius: 24px;
+    overflow-y: auto;
 
     > .overlay__cross {
       z-index: 1;

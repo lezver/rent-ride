@@ -3,7 +3,7 @@ import './Navigation.scss';
 import { IoHome } from 'react-icons/io5';
 
 export const Navigation = () => (
-  <nav>
+  <nav className="navigation">
     <ul>
       <li>
         <NavLink to="/">

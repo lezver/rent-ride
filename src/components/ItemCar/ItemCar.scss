@@ -33,10 +33,12 @@
 
       > .item-car__favorite-empty {
         color: var(--half-white);
+        transition: color var(--time) var(--time-destribution);
       }
 
       > .item-car__favorite-filled {
         color: var(--light-blue);
+        transition: color var(--time) var(--time-destribution);
       }
     }
   }

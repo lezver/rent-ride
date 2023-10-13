@@ -1,11 +1,8 @@
-.popup-window {
+.articale {
   background-color: var(--white);
   padding: 40px;
   border-radius: 24px;
   position: relative;
-  overflow-y: auto;
-  max-height: inherit;
-  max-width: inherit;
 
   > img {
     border-radius: 14px;
@@ -22,7 +19,7 @@
     }
   }
 
-  > .popup-window__characteristics {
+  > .articale__characteristics {
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -35,7 +32,7 @@
     }
   }
 
-  > .popup-window__description {
+  > .articale__description {
     font-size: 14px;
 
     margin-bottom: 24px;
@@ -46,7 +43,7 @@
     margin-bottom: 8px;
   }
 
-  > .popup-window__accessories {
+  > .articale__accessories {
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -58,7 +55,7 @@
     }
   }
 
-  > .popup-window_conditions {
+  > .articale_conditions {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;

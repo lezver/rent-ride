@@ -1,9 +1,7 @@
-import { PopupWindow } from '../';
+import { Articale } from '../';
 
-export const Info = ({ car }) => {
-  return (
-    <>
-      <PopupWindow car={car} />
-    </>
-  );
-};
+export const Info = ({ car }) => (
+  <>
+    <Articale car={car} />
+  </>
+);

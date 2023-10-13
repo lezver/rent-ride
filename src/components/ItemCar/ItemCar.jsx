@@ -1,75 +1,84 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Overlay } from '../';
 import './ItemCar.scss';
 import { MdOutlineFavoriteBorder, MdOutlineFavorite } from 'react-icons/md';
+import capCar from '../../images/cap-car.jpg';
 
-const capImg =
-  'https://media.colomio.com/t/500x500/vehicles/car/simple-sports-car.png';
-const capDes = 'car';
-
-export const ItemCar = ({ car, favoriteCars, setFavoriteCars }) => {
-  const {
-    img,
-    year,
-    make,
-    model,
-    type,
-    rentalPrice,
-    rentalCompany,
-    address,
-    mileage,
-    functionalities,
-    isFavorite,
-  } = car;
-
+export const ItemCar = ({ car }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isFavorite, setIsFavorite] = useState(false);
 
-  const addFavoriteCar = async car => {
-    car.isFavorite = true;
-    setFavoriteCars([...favoriteCars, car]);
+  useEffect(() => {
+    const localFavoriteCars = localStorage.getItem('favoriteCars');
+
+    if (localFavoriteCars)
+      JSON.parse(localFavoriteCars).find(({ id }) =>
+        id === car.id ? setIsFavorite(true) : ''
+      );
+  }, [car]);
+
+  const heartSwitch = () => {
+    const localFavoriteCars = localStorage.getItem('favoriteCars')
+      ? JSON.parse(localStorage.getItem('favoriteCars'))
+      : [car];
+
+    const checkCar = localFavoriteCars.find(({ id }) => id === car.id);
+
+    if (checkCar) {
+      const removeLoaclFavoriteCars = localFavoriteCars.filter(
+        ({ id }) => id !== car.id
+      );
+
+      setIsFavorite(false);
+
+      localStorage.setItem(
+        'favoriteCars',
+        JSON.stringify(removeLoaclFavoriteCars)
+      );
+    } else {
+      localFavoriteCars.push(car);
+
+      setIsFavorite(true);
+
+      localStorage.setItem('favoriteCars', JSON.stringify(localFavoriteCars));
+    }
   };
 
-  const deleteFavoriteCar = car => {
-    car.isFavorite = false;
-    setFavoriteCars(favoriteCars.filter(({ id }) => id !== car.id));
-  };
-
-  const foundCityAndCountry = address.split(',').splice(1, 2).join(' |');
+  const foundCityAndCountry = () =>
+    car?.address.split(',').splice(1, 2).join(' |');
 
   return (
     <>
       <li className="item-car">
         <div className="item-car__img-box">
-          <img src={img ?? capImg} alt={`${make} ${model}` ?? capDes} />
-          {!isFavorite ? (
-            <button type="button" onClick={() => addFavoriteCar(car)}>
+          <img src={car?.img ?? capCar} alt={`${car?.make} ${car?.model}`} />
+          <button type="button" onClick={heartSwitch}>
+            {!isFavorite ? (
               <MdOutlineFavoriteBorder
-                size={18}
+                size={38}
                 className="item-car__favorite-empty"
               />
-            </button>
-          ) : (
-            <button type="button" onClick={() => deleteFavoriteCar(car)}>
+            ) : (
               <MdOutlineFavorite
-                size={18}
+                size={38}
                 className="item-car__favorite-filled"
               />
-            </button>
-          )}
+            )}
+          </button>
         </div>
         <div className="item-car__info-box">
           <h3>
             <span>
-              {make}
-              <span>{` ${model}`}</span>, {year}
+              {car?.make}
+              <span>{` ${car?.model}`}</span>, {car?.year}
             </span>
-            <span>{rentalPrice}</span>
+            <span>{car?.rentalPrice}</span>
           </h3>
           <p>
-            {foundCityAndCountry} | {rentalCompany}
+            {foundCityAndCountry()} | {car?.rentalCompany}
           </p>
           <p>
-            {type} | {mileage} | {functionalities[0]}
+            {car?.type} | {car?.mileage} | {car?.functionalities[0]}
           </p>
         </div>
         <button type="button" onClick={() => setIsOpen(true)}>
