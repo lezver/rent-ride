@@ -39,7 +39,6 @@
     flex-direction: column;
     gap: var(--gap);
     padding-top: 40px;
-    margin-bottom: 50px;
 
     > li {
       padding: 8px 16px;
@@ -80,7 +79,6 @@
 
     > ul {
       padding: 40px;
-      margin-bottom: 0;
     }
   }
 }
