@@ -39,7 +39,7 @@ export const Favorites = ({ choose }) => {
         </div>
       )}
 
-      <Suspense fallback={<Loader />}>
+      <Suspense>
         <Outlet />
       </Suspense>
     </section>

@@ -1,8 +1,9 @@
 .home {
-  height: 100%;
+  margin-top: 40px;
+  height: calc(100% - 40px);
   background: url('../../images/home.jpg') no-repeat 65% / contain;
   box-shadow: inset 0px 0px 25px 25px var(--white);
-  margin-top: 50px;
+  position: relative;
 
   @media screen and (min-width: 576px) {
     background: url('../../images/home.jpg') no-repeat 65% / contain;
@@ -10,10 +11,14 @@
   }
 
   > h1 {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
     font-family: var(--c-b);
     color: var(--light-blue);
     text-align: center;
-    margin: 24px;
     font-size: 28px;
 
     > span {
@@ -27,12 +32,15 @@
     }
 
     @media screen and (min-width: 576px) {
+      top: 15%;
       font-size: 36px;
       > span {
         font-size: 40px;
       }
     }
+
     @media screen and (min-width: 992px) {
+      top: 10%;
       font-size: 40px;
       > span {
         font-size: 44px;

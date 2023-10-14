@@ -13,7 +13,13 @@ export const Layout = ({ isEmpty }) => {
       </header>
       <main className="main">
         <div className="wrapper">
-          <Suspense fallback={<Loader />}>
+          <Suspense
+            fallback={
+              <div className="bg-lodaer">
+                <Loader />
+              </div>
+            }
+          >
             <Outlet />
           </Suspense>
         </div>

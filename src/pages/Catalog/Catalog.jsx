@@ -6,28 +6,23 @@ import { getCars } from '../../services/Api';
 const Catalog = () => {
   const [cars, setCars] = useState([]);
   const [page, setPage] = useState(8);
-  const [isLoadingBtn, setIsLoadingBtn] = useState(false);
-  const [isLoadingFetch, setIsLoadingFetch] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const fetchCars = async () => {
       const { data } = await getCars();
-      setIsLoadingFetch(true);
 
-      setTimeout(() => {
-        setCars(data);
-        setIsLoadingFetch(false);
-      }, 500);
+      return setCars(data);
     };
     fetchCars();
     // eslint-disable-next-line
   }, []);
 
   const loadMore = edit => {
-    setIsLoadingBtn(true);
+    setIsLoading(true);
     setTimeout(() => {
       setPage(page + edit);
-      setIsLoadingBtn(false);
+      setIsLoading(false);
     }, 500);
   };
 
@@ -35,22 +30,16 @@ const Catalog = () => {
     <section className="catalog">
       <h2>Catalog</h2>
 
-      {isLoadingFetch ? (
+      <ListCars cars={cars?.slice(0, page)} />
+
+      {isLoading ? (
         <Loader />
       ) : (
         <>
-          <ListCars cars={cars.slice(0, page)} />
-
-          {isLoadingBtn ? (
-            <Loader />
-          ) : (
-            <>
-              {page < cars.length && (
-                <button type="button" onClick={() => loadMore(8)}>
-                  Load more
-                </button>
-              )}
-            </>
+          {page < cars.length && (
+            <button type="button" onClick={() => loadMore(8)}>
+              Load more
+            </button>
           )}
         </>
       )}
