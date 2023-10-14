@@ -19,6 +19,10 @@
     max-width: 541px;
     border-radius: 24px;
     overflow-y: auto;
+    background-color: var(--white);
+    & ::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
 
     > .overlay__cross {
       z-index: 1;
