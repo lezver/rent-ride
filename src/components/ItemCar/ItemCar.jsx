@@ -20,7 +20,7 @@ export const ItemCar = ({ car }) => {
   const heartSwitch = () => {
     const localFavoriteCars = localStorage.getItem('favoriteCars')
       ? JSON.parse(localStorage.getItem('favoriteCars'))
-      : [car];
+      : [];
 
     const checkCar = localFavoriteCars.find(({ id }) => id === car.id);
 

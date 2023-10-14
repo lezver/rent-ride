@@ -43,7 +43,8 @@
       padding: 8px 16px;
       border-bottom: 1px solid var(--light-blue);
       display: flex;
-      justify-content: center;
+
+      justify-content: space-between;
       transition: transform var(--time) var(--time-destribution),
         border var(--time) var(--time-destribution);
 
@@ -62,11 +63,24 @@
       }
 
       > a {
+        align-self: center;
         text-align: center;
         color: var(--black);
         font-family: var(--c-b);
         > span {
           color: var(--light-blue);
+        }
+      }
+      > .favorites__remove-favorite-car {
+        background-color: transparent;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        > svg {
+          color: var(--light-blue);
+          transition: color var(--time) var(--time-destribution);
         }
       }
     }

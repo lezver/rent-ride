@@ -1,8 +1,8 @@
 import { Suspense, useEffect, useState } from 'react';
 import './Favorites.scss';
-import { Link, Outlet } from 'react-router-dom';
-import { Loader } from '../../components';
+import { NavLink, Outlet } from 'react-router-dom';
 import { BsFillHeartbreakFill } from 'react-icons/bs';
+import { MdOutlineFavorite } from 'react-icons/md';
 
 export const Favorites = ({ choose }) => {
   const [favoriteCars, setFavoriteCars] = useState([]);
@@ -16,32 +16,47 @@ export const Favorites = ({ choose }) => {
     // eslint-disable-next-line
   }, []);
 
+  const removeFavoriteCar = ({ id }) => {
+    const newArr = setFavoriteCars(favoriteCars.filter(item => item.id !== id));
+
+    return newArr
+      ? localStorage.setItem('favoriteCars', JSON.stringify(newArr))
+      : localStorage.setItem('favoriteCars', JSON.stringify([]));
+  };
+
   return (
     <section className="favorites">
       <h2>Favorites</h2>
       {favoriteCars.length ? (
-        <ul>
-          {favoriteCars?.map(car => (
-            <li key={car.id}>
-              <Link to="info" onClick={() => choose(car)}>
-                {car.make}
-                <span> {car.model}</span>
-                {' - '}
-                {car.rentalPrice}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <>
+          <ul>
+            {favoriteCars?.map(car => (
+              <li key={car.id}>
+                <NavLink to="info" onClick={() => choose(car)}>
+                  {car.make}
+                  <span> {car.model}</span>
+                  {' - '}
+                  {car.rentalPrice}
+                </NavLink>
+                <button
+                  className="favorites__remove-favorite-car"
+                  onClick={() => removeFavoriteCar(car)}
+                >
+                  <MdOutlineFavorite size={38} />
+                </button>
+              </li>
+            ))}
+          </ul>
+          <Suspense>
+            <Outlet />
+          </Suspense>
+        </>
       ) : (
         <div className="favorites__empty">
           <BsFillHeartbreakFill size={100} />
           <h3>Sorry, but you haven't added any cars</h3>
         </div>
       )}
-
-      <Suspense>
-        <Outlet />
-      </Suspense>
     </section>
   );
 };
