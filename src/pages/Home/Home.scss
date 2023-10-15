@@ -1,13 +1,12 @@
 .home {
   margin-top: 40px;
   height: calc(100% - 40px);
-  background: url('../../images/home.jpg') no-repeat 65% / contain;
-  box-shadow: inset 0px 0px 25px 25px var(--white);
   position: relative;
+  background: url('../../images/home.jpg') no-repeat center / contain;
+  box-shadow: inset 0px 0px 25px 25px var(--white);
 
   @media screen and (min-width: 576px) {
-    background: url('../../images/home.jpg') no-repeat 65% / contain;
-    box-shadow: inset 0px 0px 55px 55px var(--white);
+    box-shadow: inset 0px 0px 35px 35px var(--white);
   }
 
   > h1 {

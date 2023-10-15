@@ -2,7 +2,6 @@ import { Suspense, useEffect, useState } from 'react';
 import './Favorites.scss';
 import { NavLink, Outlet } from 'react-router-dom';
 import { BsFillHeartbreakFill } from 'react-icons/bs';
-import { MdOutlineFavorite } from 'react-icons/md';
 
 export const Favorites = ({ choose }) => {
   const [favoriteCars, setFavoriteCars] = useState([]);
@@ -18,6 +17,7 @@ export const Favorites = ({ choose }) => {
 
   const removeFavoriteCar = ({ id }) => {
     const newArr = setFavoriteCars(favoriteCars.filter(item => item.id !== id));
+    choose(null);
 
     return newArr
       ? localStorage.setItem('favoriteCars', JSON.stringify(newArr))
@@ -42,7 +42,7 @@ export const Favorites = ({ choose }) => {
                   className="favorites__remove-favorite-car"
                   onClick={() => removeFavoriteCar(car)}
                 >
-                  <MdOutlineFavorite size={38} />
+                  <BsFillHeartbreakFill size={32} />
                 </button>
               </li>
             ))}
