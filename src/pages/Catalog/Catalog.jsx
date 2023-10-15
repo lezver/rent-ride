@@ -2,6 +2,7 @@ import './Catalog.scss';
 import { ListCars, Loader } from '../../components';
 import { useEffect, useState } from 'react';
 import { getCars } from '../../services/Api';
+import { BsDownload } from 'react-icons/bs';
 
 const Catalog = () => {
   const [cars, setCars] = useState([]);
@@ -37,8 +38,13 @@ const Catalog = () => {
       ) : (
         <>
           {page < cars.length && (
-            <button type="button" onClick={() => loadMore(8)}>
+            <button
+              className="catalog__load-more"
+              type="button"
+              onClick={() => loadMore(8)}
+            >
               Load more
+              <BsDownload size={24} />
             </button>
           )}
         </>

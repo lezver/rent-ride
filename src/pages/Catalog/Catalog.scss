@@ -11,25 +11,34 @@
     overflow: hidden;
   }
 
-  > button {
-    display: block;
+  > .catalog__load-more {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 3px dashed var(--light-blue);
+    font-size: 20px;
     margin: 0 auto;
+    display: flex;
+    gap: var(--gap);
+    align-items: center;
     margin-bottom: 25px;
     color: var(--light-blue);
-    border: none;
     background-color: transparent;
     font-family: var(--c-b);
     text-decoration: underline;
     transition: color var(--time) var(--time-destribution),
-      transform var(--time) var(--time-destribution);
+      transform var(--time) var(--time-destribution),
+      border var(--time) var(--time-destribution);
 
     &:hover {
       color: var(--blue);
+      border-color: var(--blue);
+      transform: scale(1.05);
     }
 
     &:active {
       color: var(--gray);
       transform: scale(0.95);
+      border-color: var(--gray);
     }
   }
 }
