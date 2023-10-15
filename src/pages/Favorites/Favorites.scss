@@ -17,8 +17,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 25% auto 0;
+    margin: 25vh auto 0;
     gap: var(--gap);
+
+    @media screen and (min-width: 576px) {
+      margin-top: 35vh;
+    }
+
     > h3 {
       text-align: center;
       font-size: 30px;
