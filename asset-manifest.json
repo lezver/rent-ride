@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/rent-ride/static/css/main.98c86106.css",
-    "main.js": "/rent-ride/static/js/main.dd85e9e4.js",
+    "main.js": "/rent-ride/static/js/main.596b84bb.js",
     "static/css/5.957baab2.chunk.css": "/rent-ride/static/css/5.957baab2.chunk.css",
     "static/js/5.b2610c41.chunk.js": "/rent-ride/static/js/5.b2610c41.chunk.js",
     "static/js/279.f10ca0bc.chunk.js": "/rent-ride/static/js/279.f10ca0bc.chunk.js",
@@ -12,13 +12,13 @@
     "static/media/cap-car.jpg": "/rent-ride/static/media/cap-car.3d8d3feb273ce181d7dc.jpg",
     "index.html": "/rent-ride/index.html",
     "main.98c86106.css.map": "/rent-ride/static/css/main.98c86106.css.map",
-    "main.dd85e9e4.js.map": "/rent-ride/static/js/main.dd85e9e4.js.map",
+    "main.596b84bb.js.map": "/rent-ride/static/js/main.596b84bb.js.map",
     "5.957baab2.chunk.css.map": "/rent-ride/static/css/5.957baab2.chunk.css.map",
     "5.b2610c41.chunk.js.map": "/rent-ride/static/js/5.b2610c41.chunk.js.map",
     "279.f10ca0bc.chunk.js.map": "/rent-ride/static/js/279.f10ca0bc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.98c86106.css",
-    "static/js/main.dd85e9e4.js"
+    "static/js/main.596b84bb.js"
   ]
 }
