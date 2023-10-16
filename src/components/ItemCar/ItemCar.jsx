@@ -66,6 +66,7 @@ export const ItemCar = ({ car }) => {
             )}
           </button>
         </div>
+
         <div className="item-car__info-box">
           <h3>
             <span>
@@ -81,6 +82,7 @@ export const ItemCar = ({ car }) => {
             {car?.type} | {car?.mileage} | {car?.functionalities[0]}
           </p>
         </div>
+
         <button type="button" onClick={() => setIsOpen(true)}>
           Learn more
         </button>

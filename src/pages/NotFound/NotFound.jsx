@@ -9,9 +9,11 @@ export const NotFound = () => {
   useEffect(() => {
     setTimeout(() => navigate('/', { replace: true }), 1000); // eslint-disable-next-line
   }, []);
+
   return (
     <section className="not-found">
       <BiSolidCarCrash size={250} />
+
       <h2>Sorry, but this page wasn't found...</h2>
     </section>
   );

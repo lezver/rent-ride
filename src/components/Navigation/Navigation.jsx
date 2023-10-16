@@ -10,6 +10,7 @@ export const Navigation = () => (
           <IoHome />
         </NavLink>
       </li>
+
       <li>
         <NavLink to="/catalog">Catalog</NavLink>
         <NavLink to="/favorites">Favorites</NavLink>

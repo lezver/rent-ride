@@ -8,17 +8,20 @@ const Catalog = () => {
   const [cars, setCars] = useState([]);
   const [page, setPage] = useState(8);
   const [isLoading, setIsLoading] = useState(false);
+  const [filteredCars, setFilteredCars] = useState([]);
 
   useEffect(() => {
     const fetchCars = async () => {
       const { data } = await getCars();
 
-      return setCars(data);
+      setCars(data);
     };
     fetchCars();
 
     // eslint-disable-next-line
   }, []);
+
+  useEffect(() => setFilteredCars(cars), [cars]);
 
   const loadMore = edit => {
     setIsLoading(true);
@@ -32,15 +35,21 @@ const Catalog = () => {
     <section className="catalog">
       <h2>Catalog</h2>
 
-      <Filter cars={cars} />
+      <Filter cars={cars} filter={setFilteredCars} page={setPage} />
 
-      <ListCars cars={cars?.slice(0, page)} />
+      <ListCars
+        cars={
+          filteredCars.length
+            ? filteredCars?.slice(0, page)
+            : cars?.slice(0, page)
+        }
+      />
 
       {isLoading ? (
         <Loader />
       ) : (
         <>
-          {page < cars.length && (
+          {page < filteredCars.length && (
             <button
               className="catalog__load-more"
               type="button"
