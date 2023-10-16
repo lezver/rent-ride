@@ -7,6 +7,7 @@ import { Overlay } from './Overlay';
 import { Articale } from './Articale';
 import { Info } from './Info';
 import { Loader } from './Loader';
+import { Filter } from './Filter';
 
 export {
   App,
@@ -18,4 +19,5 @@ export {
   Articale,
   Info,
   Loader,
+  Filter,
 };

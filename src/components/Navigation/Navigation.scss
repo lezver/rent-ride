@@ -22,7 +22,8 @@
         &:active {
           color: var(--white);
         }
-        &:hover {
+        &:hover,
+        &:focus {
           color: var(--gray);
           transform: scale(0.95);
         }

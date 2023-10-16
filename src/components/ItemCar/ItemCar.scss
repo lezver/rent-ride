@@ -4,7 +4,8 @@
   display: flex;
   flex-direction: column;
 
-  &:hover {
+  &:hover,
+  &:focus {
     transform: scale(1.1);
   }
   .item-car__img-box {
@@ -90,7 +91,8 @@
     transition: background var(--time) var(--time-destribution),
       transform var(--time) var(--time-destribution);
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: var(--blue);
     }
     &:active {

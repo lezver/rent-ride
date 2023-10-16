@@ -85,7 +85,8 @@
     transition: background var(--time) var(--time-destribution),
       transform var(--time) var(--time-destribution);
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: var(--blue);
     }
     &:active {

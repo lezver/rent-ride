@@ -1,5 +1,5 @@
 import './Catalog.scss';
-import { ListCars, Loader } from '../../components';
+import { ListCars, Loader, Filter } from '../../components';
 import { useEffect, useState } from 'react';
 import { getCars } from '../../services/Api';
 import { BsDownload } from 'react-icons/bs';
@@ -16,6 +16,7 @@ const Catalog = () => {
       return setCars(data);
     };
     fetchCars();
+
     // eslint-disable-next-line
   }, []);
 
@@ -30,6 +31,8 @@ const Catalog = () => {
   return (
     <section className="catalog">
       <h2>Catalog</h2>
+
+      <Filter cars={cars} />
 
       <ListCars cars={cars?.slice(0, page)} />
 

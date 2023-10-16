@@ -1,4 +1,9 @@
 @import-normalize; /* bring in normalize.css styles */
+*,
+*:after,
+*::before {
+  box-sizing: border-box;
+}
 
 :root {
   --blue: #0b44cd;
@@ -10,6 +15,9 @@
   --light-gray: #8a8a8933;
   --black: #121417;
   --half-black: #12141780;
+
+  --tab: 576px;
+  --des: 992px;
 
   --mob-wrap: 0 16px;
   --tab-wrap: 0 24px;
@@ -52,7 +60,6 @@ ul {
 }
 
 body {
-  box-sizing: border-box;
   margin: 0;
   font-family: var(--c-r);
   font-size: 16px;

@@ -1,0 +1,92 @@
+.filter {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  width: 85%;
+  margin: 0 auto 50px;
+
+  > select {
+    // max-width: fit-content;
+  }
+
+  > fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+
+    > legend {
+      font-size: 12px;
+      color: var(--gray);
+      margin-bottom: 8px;
+    }
+
+    > select {
+      border: none;
+      background-color: var(--darck-white);
+      color: black;
+      padding: 14px 24px;
+      font-size: 18px;
+      border-radius: 14px;
+      outline: none;
+    }
+
+    > input {
+      border: none;
+      background-color: var(--darck-white);
+      color: black;
+      padding: 14px 24px;
+      width: fit-content;
+      font-size: 18px;
+      outline: none;
+      width: 119px;
+
+      @media screen and (min-width: 576px) {
+        width: 160px;
+      }
+
+      &::placeholder {
+        color: var(--black);
+        opacity: 1;
+      }
+
+      &:nth-child(2) {
+        border-top-left-radius: 14px;
+        border-bottom-left-radius: 14px;
+        border-right: 1px solid var(--light-gray);
+      }
+
+      &:last-child {
+        border-top-right-radius: 14px;
+        border-bottom-right-radius: 14px;
+        border-left: 1px solid var(--light-gray);
+      }
+    }
+  }
+
+  > button {
+    align-self: flex-end;
+    height: fit-content;
+    font-size: 14px;
+    font-family: var(--c-b);
+    color: var(--white);
+    padding: 14px 44px;
+    border: none;
+    background-color: var(--light-blue);
+    border-radius: 12px;
+    transition: background var(--time) var(--time-destribution),
+      transform var(--time) var(--time-destribution),
+      color var(--time) var(--time-destribution);
+
+    &:hover,
+    &:focus {
+      background-color: var(-blue);
+      transform: scale(1.05);
+    }
+    &:active {
+      transform: scale(0.95);
+      background-color: var(--light-gray);
+      color: var(--gray);
+    }
+  }
+}

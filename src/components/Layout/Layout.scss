@@ -44,7 +44,8 @@
       color: var(--black);
       transition: color var(--time) var(--time-destribution),
         text-decoration var(--time) var(--time-destribution);
-      &:hover {
+      &:hover,
+      &:focus {
         color: var(--gray);
       }
     }
