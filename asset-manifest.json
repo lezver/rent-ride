@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/rent-ride/static/css/main.8634f194.css",
-    "main.js": "/rent-ride/static/js/main.06f89737.js",
+    "main.css": "/rent-ride/static/css/main.135dc4c3.css",
+    "main.js": "/rent-ride/static/js/main.cb169e3c.js",
     "static/css/5.d0d8caa5.chunk.css": "/rent-ride/static/css/5.d0d8caa5.chunk.css",
-    "static/js/5.0ba7e345.chunk.js": "/rent-ride/static/js/5.0ba7e345.chunk.js",
+    "static/js/5.d7a9d1b3.chunk.js": "/rent-ride/static/js/5.d7a9d1b3.chunk.js",
     "static/css/263.cf83cb50.chunk.css": "/rent-ride/static/css/263.cf83cb50.chunk.css",
     "static/js/263.b5f667c2.chunk.js": "/rent-ride/static/js/263.b5f667c2.chunk.js",
     "static/js/279.f10ca0bc.chunk.js": "/rent-ride/static/js/279.f10ca0bc.chunk.js",
@@ -13,16 +13,16 @@
     "static/media/home.jpg": "/rent-ride/static/media/home.3b6a7e32c4ee586710d6.jpg",
     "static/media/cap-car.jpg": "/rent-ride/static/media/cap-car.3d8d3feb273ce181d7dc.jpg",
     "index.html": "/rent-ride/index.html",
-    "main.8634f194.css.map": "/rent-ride/static/css/main.8634f194.css.map",
-    "main.06f89737.js.map": "/rent-ride/static/js/main.06f89737.js.map",
+    "main.135dc4c3.css.map": "/rent-ride/static/css/main.135dc4c3.css.map",
+    "main.cb169e3c.js.map": "/rent-ride/static/js/main.cb169e3c.js.map",
     "5.d0d8caa5.chunk.css.map": "/rent-ride/static/css/5.d0d8caa5.chunk.css.map",
-    "5.0ba7e345.chunk.js.map": "/rent-ride/static/js/5.0ba7e345.chunk.js.map",
+    "5.d7a9d1b3.chunk.js.map": "/rent-ride/static/js/5.d7a9d1b3.chunk.js.map",
     "263.cf83cb50.chunk.css.map": "/rent-ride/static/css/263.cf83cb50.chunk.css.map",
     "263.b5f667c2.chunk.js.map": "/rent-ride/static/js/263.b5f667c2.chunk.js.map",
     "279.f10ca0bc.chunk.js.map": "/rent-ride/static/js/279.f10ca0bc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8634f194.css",
-    "static/js/main.06f89737.js"
+    "static/css/main.135dc4c3.css",
+    "static/js/main.cb169e3c.js"
   ]
 }
