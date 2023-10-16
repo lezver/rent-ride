@@ -49,7 +49,7 @@ const Catalog = () => {
         <Loader />
       ) : (
         <>
-          {page < filteredCars.length && (
+          {page < (filteredCars.length ? filteredCars.length : cars.length) && (
             <button
               className="catalog__load-more"
               type="button"
