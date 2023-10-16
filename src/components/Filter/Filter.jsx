@@ -28,8 +28,6 @@ export const Filter = ({ cars, filter, page }) => {
       .filter(car => (from !== '' ? from <= car.mileage : car))
       .filter(car => (to !== '' ? to >= car.mileage : car));
 
-    console.log(filteredCars);
-
     filter(filteredCars);
 
     page(8);
