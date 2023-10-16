@@ -1,3 +1,4 @@
+import Notiflix from 'notiflix';
 import('./Filter.scss');
 
 export const Filter = ({ cars, filter, page }) => {
@@ -27,6 +28,13 @@ export const Filter = ({ cars, filter, page }) => {
       .filter(car => (price !== 'all' ? price === car.rentalPrice : car))
       .filter(car => (from !== '' ? from <= car.mileage : car))
       .filter(car => (to !== '' ? to >= car.mileage : car));
+
+    const isOne =
+      filteredCars.length > 1 ? `${filteredCars.length} cars` : 'car';
+
+    filteredCars.length
+      ? Notiflix.Notify.success(`We find ${isOne}`)
+      : Notiflix.Notify.failure("Sorry, we didn't have this car");
 
     filter(filteredCars);
 
